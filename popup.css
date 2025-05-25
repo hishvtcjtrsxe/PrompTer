@@ -1,65 +1,132 @@
 body {
-    font-family: sans-serif;
-    width: 350px;
-    padding: 10px;
+    font-family: 'Roboto', sans-serif;
+    /* Changed font */
+    width: 380px;
+    /* Slightly wider for better spacing */
+    padding: 15px;
+    background-color: #f4f7f6;
+    /* Light, elegant background */
+    color: #333;
+    /* Darker text for better readability */
 }
 
 h3,
 h4 {
     margin-top: 0;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
+    /* Increased margin */
+    color: #2c3e50;
+    /* A deep, elegant blue-gray for headings */
+}
+
+h3 {
+    text-align: center;
+    font-size: 1.4em;
+    margin-bottom: 15px;
 }
 
 textarea {
-    width: 95%;
-    /* Adjusted for padding within the body */
-    margin-bottom: 10px;
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    width: 100%;
+    /* Use 100% and rely on box-sizing */
+    margin-bottom: 12px;
+    padding: 8px;
+    border: 1px solid #d1d8e0;
+    /* Softer border color */
+    border-radius: 5px;
+    /* Slightly more rounded corners */
     box-sizing: border-box;
-    /* Ensures padding and border don't increase width */
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.95em;
+    background-color: #ffffff;
+    /* White background for text areas */
 }
 
-button {
-    padding: 8px 15px;
+textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    /* Focus indicator */
+}
+
+button#modifyButton {
+    /* Specific ID for the main button */
+    padding: 10px 18px;
     background-color: #007bff;
+    /* Primary blue */
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
     cursor: pointer;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    font-weight: 500;
+    /* Medium font weight */
+    font-size: 1em;
+    display: block;
+    /* Make button take full width */
+    width: 100%;
+    box-sizing: border-box;
+    transition: background-color 0.2s ease-in-out;
+    /* Smooth hover transition */
 }
 
-button:hover {
+button#modifyButton:hover {
     background-color: #0056b3;
+    /* Darker blue on hover */
 }
 
 #statusMessage {
     font-size: 0.9em;
-    margin-top: 5px;
+    margin-top: 8px;
+    color: #555;
 }
 
 a {
     display: block;
-    margin-top: 10px;
+    margin-top: 15px;
     font-size: 0.9em;
     text-align: center;
+    color: #007bff;
+    /* Consistent link color */
+    text-decoration: none;
+    /* Remove underline */
+}
+
+a:hover {
+    text-decoration: underline;
+    /* Underline on hover for links */
+    color: #0056b3;
 }
 
 label {
     display: block;
-    margin-bottom: 4px;
-    font-size: 0.9em;
+    margin-bottom: 5px;
+    font-size: 0.95em;
+    font-weight: 500;
+    color: #495057;
+    /* Slightly muted label color */
 }
 
 select {
     width: 100%;
-    /* Will take full width of its container */
-    padding: 6px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    padding: 8px;
+    margin-bottom: 12px;
+    border: 1px solid #d1d8e0;
+    border-radius: 5px;
     box-sizing: border-box;
-    /* Ensures padding and border don't increase width */
+    background-color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.95em;
+}
+
+select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-color: #e0e0e0;
+    /* Lighter horizontal rule */
+    margin-top: 15px;
+    margin-bottom: 15px;
 }

@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
-    "name": "AI Prompt Modifier",
-    "version": "1.0",
+    "name": "PrompTer",
+    "version": "1.2",
     "description": "Uses AI to modify and improve your text prompts.",
     "permissions": [
         "storage",
@@ -26,15 +26,15 @@
     "action": {
         "default_popup": "popup.html",
         "default_icon": {
-            "16": "icons/icon16.png",
-            "48": "icons/icon48.png",
-            "128": "icons/icon128.png"
+            "16": "icons/ChatGPT_Image_May_25__2025__04_27_35_PM-removebg-preview.png",
+            "48": "icons/ChatGPT_Image_May_25__2025__04_27_35_PM-removebg-preview.png",
+            "128": "icons/ChatGPT_Image_May_25__2025__04_27_35_PM-removebg-preview.png"
         }
     },
     "options_page": "options.html",
     "icons": {
-        "16": "icons/icon16.png",
-        "48": "icons/icon48.png",
-        "128": "icons/icon128.png"
+        "16": "icons/ChatGPT_Image_May_25__2025__04_27_35_PM-removebg-preview.png",
+        "48": "icons/ChatGPT_Image_May_25__2025__04_27_35_PM-removebg-preview.png",
+        "128": "icons/ChatGPT_Image_May_25__2025__04_27_35_PM-removebg-preview.png"
     }
 }
