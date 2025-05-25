@@ -1,11 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Chrome Extension Starter Template - Options</title>
+  <title>AI Prompt Modifier Options</title>
   <link rel="stylesheet" type="text/css" href="options.css">
 </head>
 <body>
-  <h1>Settings</h1>
+  <h2>AI Prompt Modifier Options</h2>
+  
+  <div>
+    <label for="apiKey">AI API Key:</label>
+    <input type="password" id="apiKey" size="50">
+  </div>
+  
+  <div>
+    <label for="defaultModel">Default AI Model (if applicable):</label>
+    <input type="text" id="defaultModel" placeholder="e.g., gpt-3.5-turbo">
+  </div>
+  
+  <button id="saveOptionsButton">Save Options</button>
+  <p id="status"></p>
+  
   <script src="options.js"></script>
 </body>
 </html>

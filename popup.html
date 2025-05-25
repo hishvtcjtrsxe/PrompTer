@@ -1,11 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Chrome Extension Starter Template</title>
+  <title>AI Prompt Modifier</title>
   <link rel="stylesheet" type="text/css" href="popup.css">
 </head>
 <body>
-  <h1>Hello World</h1>
+  <h3>AI Prompt Modifier</h3>
+  <textarea id="textToModify" rows="5" placeholder="Enter text to modify or it will use selected text on page..."></textarea>
+  
+  <div>
+    <label for="modificationType">Modification Style:</label>
+    <select id="modificationType">
+      <option value="improve">Improve</option>
+      <option value="formal">Make Formal</option>
+      <option value="concise">Make Concise</option>
+      <option value="expand">Expand</option>
+      <option value="custom">Custom (see options)</option>
+    </select>
+  </div>
+  
+  <button id="modifyButton">Modify Text</button>
+  
+  <hr>
+  
+  <h4>Modified Text:</h4>
+  <textarea id="modifiedTextResult" rows="5" readonly placeholder="AI-modified text will appear here..."></textarea>
+  
+  <p id="statusMessage"></p>
+  
+  <a href="options.html" target="_blank">Settings (API Key)</a>
+  
   <script src="popup.js"></script>
 </body>
 </html>
