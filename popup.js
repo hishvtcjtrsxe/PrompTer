@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const modifyButton = document.getElementById('modifyButton');
     const modifiedTextResultEl = document.getElementById('modifiedTextResult');
     const statusMessageEl = document.getElementById('statusMessage');
+    const loaderEl = document.getElementById('loader'); // Get the loader element
 
     // 1. Prefill with Selected Text from the active tab
     chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
@@ -35,11 +36,15 @@ document.addEventListener('DOMContentLoaded', () => {
             const text = textToModifyEl.value;
             const type = modificationTypeEl.value;
 
-            statusMessageEl.textContent = 'Processing...';
+            statusMessageEl.textContent = ''; // Clear status message
+            statusMessageEl.style.display = 'none'; // Hide status message element
+            loaderEl.style.display = 'block'; // Show loader
             modifiedTextResultEl.value = '';
 
             if (!text.trim()) {
+                loaderEl.style.display = 'none'; // Hide loader
                 statusMessageEl.textContent = 'Please enter some text to modify.';
+                statusMessageEl.style.display = 'block'; // Show status message
                 return;
             }
 
@@ -49,6 +54,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     textToModify: text,
                     modificationType: type,
                 });
+
+                loaderEl.style.display = 'none'; // Hide loader
+                statusMessageEl.style.display = 'block'; // Show status message element
 
                 if (chrome.runtime.lastError) {
                     // This catches issues if the background script itself has an issue before even processing the message
@@ -75,6 +83,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
 
             } catch (error) {
+                loaderEl.style.display = 'none'; // Hide loader in case of error
+                statusMessageEl.style.display = 'block'; // Show status message element
                 // This catches network errors or if sendMessage itself throws an error (e.g. extension context invalidated)
                 console.error("Error sending message to background script:", error);
                 statusMessageEl.textContent = `Error: ${error.message}. Ensure the extension is loaded correctly and the background service is running.`;
