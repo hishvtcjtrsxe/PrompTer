@@ -1,40 +1,43 @@
 body {
-  font-family: sans-serif;
-  width: 350px;
-  padding: 10px;
+    font-family: sans-serif;
+    width: 350px;
+    padding: 10px;
 }
 
-h3, h4 {
-  margin-top: 0;
-  margin-bottom: 8px;
+h3,
+h4 {
+    margin-top: 0;
+    margin-bottom: 8px;
 }
 
 textarea {
-  width: 95%; /* Adjusted for padding within the body */
-  margin-bottom: 10px;
-  padding: 5px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box; /* Ensures padding and border don't increase width */
+    width: 95%;
+    /* Adjusted for padding within the body */
+    margin-bottom: 10px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    /* Ensures padding and border don't increase width */
 }
 
 button {
-  padding: 8px 15px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  margin-bottom: 10px;
+    padding: 8px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 10px;
 }
 
 button:hover {
-  background-color: #0056b3;
+    background-color: #0056b3;
 }
 
 #statusMessage {
-  font-size: 0.9em;
-  margin-top: 5px;
+    font-size: 0.9em;
+    margin-top: 5px;
 }
 
 a {
@@ -51,10 +54,12 @@ label {
 }
 
 select {
-    width: 100%; /* Will take full width of its container */
+    width: 100%;
+    /* Will take full width of its container */
     padding: 6px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    box-sizing: border-box; /* Ensures padding and border don't increase width */
+    box-sizing: border-box;
+    /* Ensures padding and border don't increase width */
 }
